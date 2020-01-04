@@ -7,6 +7,11 @@
     <font color = red><center> <h1>Mūsu StartIT Instagram</h1></center></font>
     <A href=templates/bildes.html>
     <img src='static/images/back.png' width='550px' class='button'/></a>
+
+    <form>
+      <input type="button" value="Uz sākumu" onclick='templates/bildes.html'>
+      </form>
+      
         <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
 
     {% for comment in comm %}
