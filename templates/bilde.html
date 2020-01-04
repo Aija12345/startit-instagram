@@ -1,14 +1,13 @@
 <html>
-  
   <head>
     <title>StartIT Instagram</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style13.css') }}">
   </head>
   <font color = red><center><h1>Mūsu StartIT Instagram</h1></center></font>
   <body>
-    <p><img src='static/images/back.png' width='350px' hight='350px' class='button'/> </p> 
+    
     <span class="text">Komentāri: {{comments(pic)}}</span>
-  </div>
+  
     <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
     
     {% for comment in comm %}
