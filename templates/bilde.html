@@ -5,10 +5,8 @@
   </head>
   <body>
     <font color = red><center> <h1>Mūsu StartIT Instagram</h1></center></font>
-    <p>
-      <a href='#'><img src='static/images/back.png' width='350px' class='button'/></a>
-    </p>
-    <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
+    <a href={{ url_for('templates', filename='bildes.html') }}><img src='static/images/back.png' width='350px' class='button'/></a>
+        <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
 
     {% for comment in comm %}
       <p>
