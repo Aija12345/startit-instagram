@@ -5,10 +5,8 @@
   </head>
   <body>
     <font color = red><center> <h1>Mūsu StartIT Instagram</h1></center></font>
-    <div class="container">
-      <a href="{{ url_for('bildes', picture=pic) }}">
-      <img src='{{pic}}' height='250px' width='250px' alt='{{pic}}'/>  
-    </a>
+    <button onclick="window.location.href='/bildes.html'">uz sākumu</button>
+    
     <span class="text">Komentāri: {{comments(pic)}}</span>
   </div>
     <img src='static/images/back.png' width="430px" height="130px" border=0 class='button'/></a>
