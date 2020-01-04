@@ -6,10 +6,7 @@
   </head>
   <font color = red><center><h1>Mūsu StartIT Instagram</h1></center></font>
   <body>
-    <div class="container">
-      <a href="{{ url_for('bildes', picture=pic) }}">
-      <img src='static/images/back.png' height='250px' width='250px' class='button'}'/>  
-    </a>
+    
     <span class="text">Komentāri: {{comments(pic)}}</span>
   </div>
     <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
