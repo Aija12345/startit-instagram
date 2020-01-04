@@ -5,12 +5,9 @@
   </head>
   <body>
     <font color = red><center> <h1>Mūsu StartIT Instagram</h1></center></font>
-    <A href="bildes.html">
-    <img src='static/images/back.png' style="width:42px;height:42px;border:0" class='button'/></a>
+    <a href="{{ url_for('templates', filename='bildes.html') }}">
+    <img src='static/images/back.png' width="420px' border=5" class='button'/></a>
 
-    <form>
-      <input type="button" value="Uz sākumu" onclick='templates/bildes.html'>
-      </form>
       
         <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
 
