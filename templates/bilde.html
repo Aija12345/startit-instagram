@@ -3,8 +3,9 @@
     <title>StartIT Instagram</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style13.css') }}">
   </head>
-  <body>
   <font color = red><center><h1>Mūsu StartIT Instagram</h1></center></font>
+  <body>
+  
     <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
     
     {% for comment in comm %}
