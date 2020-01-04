@@ -1,11 +1,17 @@
 <html>
+  <p><img src='static/images/back.png' width='350px' hight='350px' class='button'/> </p>
   <head>
     <title>StartIT Instagram</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style13.css') }}">
   </head>
   <font color = red><center><h1>Mūsu StartIT Instagram</h1></center></font>
   <body>
-  
+    <div class="container">
+      <a href="{{ url_for('bildes', picture=pic) }}">
+      <img src='static/images/back.png' height='250px' width='250px' class='button'}'/>  
+    </a>
+    <span class="text">Komentāri: {{comments(pic)}}</span>
+  </div>
     <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
     
     {% for comment in comm %}
@@ -17,7 +23,7 @@
     {% endfor %}
     
     <form action = "{{ url_for('bilde', picture=request.args.get('picture')) }}" method = "post">
-      <p><img src='static/images/back.png' width='35px' class='button'/> </p>
+      
       <h3>Pievienot jaunu komentaru: <img src='static/images/add-button.png' width='35px' class='button'/></h3>
       <p><input type="text" name="newComment"></p>
       <p><input type = "submit" value = "Pievienot" /></p>
