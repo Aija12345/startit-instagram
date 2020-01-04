@@ -9,8 +9,7 @@
   <font color = red><center> <h1>Mūsu StartIT Instagram</h1></center></font>
 {% for pic in pictures %}  
 <div class="container">
-  
-    <a href="{{ url_for('bilde', picture=pic) }}">
+      <a href="{{ url_for('bilde', picture=pic) }}">
       <img src='{{pic}}' height='250px' width='250px' alt='{{pic}}'/>  
     </a>
     <span class="text">Komentāri: {{comments(pic)}}</span>
