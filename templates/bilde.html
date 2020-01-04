@@ -3,13 +3,15 @@
     <title>StartIT Instagram</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style13.css') }}">
   </head>
-  <font color = red><center><h1>Mūsu StartIT Instagram</h1></center></font>
   <body>
-    
-    <span class="text">Komentāri: {{comments(pic)}}</span>
-  
+    <font color = red><center> <h1>Mūsu StartIT Instagram</h1></center></font>
+    <p>
+     
+      <a href='#'><img src='static/images/back.png' width='350px' height='350px' class='button'/></a>
+      
+    </p>
     <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
-    
+
     {% for comment in comm %}
       <p>
         {{comment}}
@@ -19,7 +21,6 @@
     {% endfor %}
     
     <form action = "{{ url_for('bilde', picture=request.args.get('picture')) }}" method = "post">
-      
       <h3>Pievienot jaunu komentaru: <img src='static/images/add-button.png' width='35px' class='button'/></h3>
       <p><input type="text" name="newComment"></p>
       <p><input type = "submit" value = "Pievienot" /></p>
