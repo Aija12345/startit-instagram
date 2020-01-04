@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style13.css') }}">
   </head>
   <body>
-    <font color = red><center> <h1>Mūsu StartIT Instagram</h1></center></font>
+  <font color = red><center><h1>Mūsu StartIT Instagram</h1></center></font>
     <img src='{{request.args.get('picture')}}' alt='{{pic}}' class='full' />
     
     {% for comment in comm %}
