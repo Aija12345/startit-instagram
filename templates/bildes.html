@@ -6,10 +6,10 @@
 
 <body>
 <div class="container-all">
- 
+  <font color = red><center> <h1>StartIT Instagram</h1></center></font>
 {% for pic in pictures %}  
 <div class="container">
-  <font color = red><center> <h1>StartIT Instagram</h1></center></font>
+  
     <a href="{{ url_for('bilde', picture=pic) }}">
       <img src='{{pic}}' height='250px' width='250px' alt='{{pic}}'/>  
     </a>
